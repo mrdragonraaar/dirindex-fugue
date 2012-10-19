@@ -1,0 +1,216 @@
+/* 
+	Theme Name: Fugue Icon Directory Index
+	Description: Apache theme for mod_autoindex using fugue icons.
+	Author: Adrian D. Elgar
+	Author URI: http://mrdragonraaar.com
+	Version: 0.1
+*/
+
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	margin: 10px 10px 10px 10px;
+	font-size: 11px;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover
+{
+	color: #444;
+	text-decoration: underline;
+}
+
+img
+{
+	border: 0;
+}
+
+
+/*--------
+  Content
+----------*/
+#content
+{
+	width: 800px;
+	margin: 15px auto;
+}
+
+
+/*-------
+  Header
+---------*/
+#header
+{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*------------
+  Path Navbar
+--------------*/
+h1#path
+{
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+
+#navicon
+{
+	vertical-align: middle;
+	padding-right: 6px;
+}
+
+.navsep
+{
+	padding: 0;
+}
+
+
+/*-------
+  Search
+---------*/
+#searchbox
+{
+	float: right;
+}
+
+#searchicon
+{
+	vertical-align: middle;
+	padding-right: 1px;
+}
+
+#search
+{
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 11px;
+
+	vertical-align: middle;
+	width: 165px;
+}
+
+
+/*-------
+  Footer
+---------*/
+#footer
+{
+	text-align: right;
+	font-size: 9px;
+	font-style: italic;
+	margin: 15px 1px;
+}
+
+
+/*------------------
+  Directory Listing
+-------------------*/
+table
+{
+	border: 0;
+
+	width: 800px;
+	padding: 0px;
+}
+
+tr, td, th
+{
+	border: 0;
+	padding: 0;
+}
+
+th
+{
+	background: #f3f3f3;
+	border: 1px solid #e0e0e0;
+	text-align: left;
+	padding: 2px 5px;
+
+	font-size: 10px;
+	font-weight: normal;
+}
+
+th a
+{
+	color: #333333;
+}
+
+td
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding: 1px 5px;
+}
+
+/* ICON header cell */
+th:first-child
+{
+	text-align: center;
+}
+
+th:first-child img
+{
+	vertical-align: middle;
+}
+
+/* all cells in ICON column */
+td:first-child
+{
+	text-align: center;
+	width: 24px;
+
+	padding: 1px 0px;
+}
+
+/* NAME header */
+th:first-child + th
+{
+	text-align: left;
+}
+
+/* all other NAME cells */
+td:first-child + td
+{
+	text-align: left;
+	vertical-align: top;
+}
+
+/* LAST MODIFIED header */
+th:first-child + th + th
+{
+	text-align: right;
+	white-space: nowrap;
+}
+
+/* all other LAST MODIFIED cells */
+td:first-child + td + td
+{
+	width: 120px;
+	text-align: right;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+/* SIZE header */
+th:first-child + th + th + th
+{
+	text-align: right;
+	white-space: nowrap;
+}
+
+/* all other SIZE cells */
+td:first-child + td + td + td
+{
+	width: 45px;
+	text-align: right;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+

@@ -1,0 +1,66 @@
+# ----------------------------
+# .htaccess for dirindex-fugue
+# ----------------------------
+
+<IfModule mod_php5.c>
+php_value arg_separator.input &;
+</IfModule>
+
+<IfModule mod_autoindex.c>
+    IndexOptions FancyIndexing
+    IndexOptions FoldersFirst IgnoreCase XHTML NameWidth=*
+    IndexOptions SuppressHTMLPreamble SuppressRules HTMLTable
+    IndexOptions IconHeight=16 IconWidth=16
+    IndexOptions IconsAreLinks
+    IndexOptions SuppressDescription
+
+    AddType text/html .php
+    HeaderName /global/themes/apache/dirindex-fugue/header.php
+    ReadmeName /global/themes/apache/dirindex-fugue/footer.php
+
+    DefaultIcon /global/icons/fugue-icons/icons/document.png
+
+    AddIcon /global/icons/fugue-icons/icons/document-page-previous.png ..
+    AddIcon /global/icons/fugue-icons/icons/control-stop-square-small.png ^^BLANKICON^^
+    AddIcon /global/icons/fugue-icons/icons/folder-horizontal.png ^^DIRECTORY^^
+
+    AddIconByEncoding (CMP,/global/icons/fugue-icons/icons/document-zipper.png) x-compress x-gzip x-bzip2
+
+    AddIcon /global/icons/fugue-icons/icons/application-blue.png .bin .exe
+    AddIcon /global/icons/fugue-icons/icons/document-zipper.png .hqx
+    AddIcon /global/icons/fugue-icons/icons/document-zipper.png .tar
+    AddIcon /global/icons/fugue-icons/icons/document-zipper.png .Z .z .tgz .gz .zip .rar
+    AddIcon /global/icons/fugue-icons/icons/document-zipper.png .uu
+    AddIcon /global/icons/fugue-icons/icons/document-globe.png .wrl .wrl.gz .vrml .vrm .iv
+    AddIcon /global/icons/fugue-icons/icons/document-binary.png .ps .ai .eps
+    AddIcon /global/icons/fugue-icons/icons/document-binary.png .tex
+    AddIcon /global/icons/fugue-icons/icons/document-html.png .ps .ai .eps
+    AddIcon /global/icons/fugue-icons/icons/document-xaml.png .html .shtml .htm
+    AddIcon /global/icons/fugue-icons/icons/document-pdf.png .pdf
+    AddIcon /global/icons/fugue-icons/icons/document-text.png .txt .rtf
+    AddIcon /global/icons/fugue-icons/icons/document-code.png .c .h
+    AddIcon /global/icons/fugue-icons/icons/document-code.png .pl .pm .py
+    AddIcon /global/icons/fugue-icons/icons/document-code.png .for
+    AddIcon /global/icons/fugue-icons/icons/document-code.png .conf .sh .shar .csh .ksh .tcl
+    AddIcon /global/icons/fugue-icons/icons/document-code.png .css .js
+    AddIcon /global/icons/fugue-icons/icons/document-php.png .php
+    AddIcon /global/icons/fugue-icons/icons/document-film.png .dvi
+    AddIcon (SND,/global/icons/fugue-icons/icons/document-music.png) .ogg
+    AddIcon (VID,/global/icons/fugue-icons/icons/document-film.png) .ogm
+
+    AddIcon /global/icons/fugue-icons/icons/document-epub.png .epub .lit
+    AddIcon /global/icons/fugue-icons/icons/document-mobi.png .mobi .azw
+
+    AddIcon /global/icons/fugue-icons/icons/document-word.png .doc .dot .docx .dotx .docm .dotm
+    AddIcon /global/icons/fugue-icons/icons/document-excel.png .xls .xlt .xla .xlsx .xltx .xlsm .xltm .xlam .xlsb
+    AddIcon /global/icons/fugue-icons/icons/document-excel-csv.png .csv
+    AddIcon /global/icons/fugue-icons/icons/document-powerpoint.png .ppt .pot .pps .ppa .pptx .potx .ppsx .ppam .pptm .potm .ppsm
+
+    AddIcon /global/icons/fugue-icons/icons/document-photoshop.png .psd
+
+    AddIconByType (TXT,/global/icons/fugue-icons/icons/document-text.png) text/*
+    AddIconByType (IMG,/global/icons/fugue-icons/icons/document-image.png) image/*
+    AddIconByType (SND,/global/icons/fugue-icons/icons/document-music.png) audio/*
+    AddIconByType (VID,/global/icons/fugue-icons/icons/document-film.png) video/*
+</IfModule>
+
